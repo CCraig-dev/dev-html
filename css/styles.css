@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+body, html {
+  padding: 0;
+  margin: 0; }
+
+a {
+  color: #F36E21; }
+
+#identityBar {
+  min-height: 51px;
+  width: 100%;
+  background-color: #F36E21;
+  vertical-align: center; }
+  #identityBar #identityBar a {
+    color: #fff;
+    text-decoration: none;
+    line-height: 51px; }
+  #identityBar #identityBar a:hover {
+    text-decoration: underline; }
+
+.right {
+  text-align: right; }
+
+body {
+  padding-bottom: 30px; }
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px; }
+
+.theme-showcase > p > .btn {
+  margin: 5px 0; }
+
+.theme-showcase .navbar .container {
+  width: auto; }
+
+.idLogo {
+  background-image: url("../images/idbar.png");
+  display: block;
+  width: 375px;
+  height: 51px;
+  background-size: 375px 51px; }
+
+.search-bar {
+  height: 21px;
+  border-right: 0px;
+  margin-top: 15px; }
+
+.search-button {
+  height: 21px;
+  background-image: url("../images/idbar-orange-search-magnify.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  border-left: 0px;
+  margin-top: 15px; }
+
+.search-button:hover {
+  background-color: #FFF;
+  background-image: url("../images/idbar-orange-search-magnify.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  border-left: 0px; }
+
+.navbar-brand {
+  display: none; }
+
+.navbar {
+  border-radius: 0;
+  min-height: 20px; }
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+  color: #fff;
+  background-color: #F36E21; }
+
+.list-group-item.active > .badge, .nav-pills > .active > a > .badge {
+  color: #513127;
+  background-color: #fff; }
+
+.badge {
+  background-color: #513127; }
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+  background-color: #F36E21;
+  background-image: -webkit-linear-gradient(top, #F36E21 0, #ee5f0d 100%);
+  background-image: -o-linear-gradient(top, #F36E21 0, #ee5f0d 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#F36E21), to(#ee5f0d));
+  background-image: linear-gradient(to bottom, #F36E21 0, #ee5f0d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffF36E21', endColorstr='#ffF36E21', GradientType=0);
+  background-repeat: repeat-x; }
+
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+  background-color: #F36E21;
+  background-image: -webkit-linear-gradient(top, #F36E21 0, #ee5f0d 100%);
+  background-image: -o-linear-gradient(top, #F36E21 0, #ee5f0d 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#F36E21), to(#ee5f0d));
+  background-image: linear-gradient(to bottom, #F36E21 0, #ee5f0d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffF36E21', endColorstr='#ffF36E21', GradientType=0);
+  background-repeat: repeat-y;
+  border-color: #a54209; }
+
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+  text-shadow: 0 -1px 0 #a54209; }
+
+.panel-default > .panel-heading {
+  background-color: #F36E21;
+  background-image: -webkit-linear-gradient(top, #F36E21 0, #ee5f0d 100%);
+  background-image: -o-linear-gradient(top, #F36E21 0, #ee5f0d 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#F36E21), to(#ee5f0d));
+  background-image: linear-gradient(to bottom, #F36E21 0, #ee5f0d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffF36E21', endColorstr='#ffF36E21', GradientType=0);
+  background-repeat: repeat-x;
+  color: #FFF; }
+
+a:hover, a:focus {
+  color: #513127;
+  text-decoration: underline; }
+
+.ritMap {
+  max-width: 100%; }
+
+.welcomeBox {
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  height: 100%;
+  margin-top: 15px; }
+
+.center-horizontal {
+  float: none;
+  margin: 0 auto;
+  text-align: center; }
+
+#date-param .spacer-high {
+  padding-bottom: 5px; }
+#date-param .spacer-low {
+  padding-bottom: 15px; }
+#date-param .span2.form-control {
+  width: 50%; }
+#date-param h3 {
+  padding-top: 10px; }
+
+#output-pane h1 {
+  padding-top: 10px; }
+
+/*# sourceMappingURL=styles.sass.map */
+
+/*# sourceMappingURL=styles.css.map */

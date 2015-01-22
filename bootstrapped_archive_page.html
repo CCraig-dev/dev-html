@@ -1,0 +1,184 @@
+<html lang="en">
+<!-- Begin Head-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="RIT weather weather.rit.edu campus">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>Theme Template for Bootstrap</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <!-- Bootstrap theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/styles.css" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="vitalets-bootstrap-datepicker-c7af15b/js/bootstrap-datepicker.js"></script>
+  <link href="vitalets-bootstrap-datepicker-c7af15b/css/datepicker.css" rel="stylesheet">
+
+</head>
+<!-- End Head -->
+
+<!-- Begin Body -->
+<body role="document">
+  <!-- Begin RIT Identity Bar -->
+  <div id="identityBar">
+   <div class="container">
+    <div class="row">
+     <div class="col-md-6">
+      <span class="idLogo"></span>
+    </div>
+    <div class="col-md-4">
+      <div class="right">
+       <a href="#">Directories</a>
+     </div>
+   </div>
+   <div class="col-md-2">
+    <div class="input-group">
+      <input type="text" class="form-control search-bar" placeholder ="Search RIT">
+      <span class="input-group-btn">
+        <button class="btn btn-default search-button" type="button">
+
+        </button>
+      </span>
+    </div><!-- /input-group -->
+  </div>
+</div>
+</div>
+</div>
+<!-- End ID Bar -->
+
+<!-- Begin fixed Nav Bar -->
+<nav class="navbar navbar-inverse" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Bootstrap theme</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Home</a></li>
+        <li class="active"><a href="#archive">Archive</a></li>
+        <li><a href="#download">Download</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+<!-- End Fixed Nav Bar -->
+
+<!-- Begin Archive Body -->
+<div class="container">
+  <div class="row">
+
+   <!--Begin Input Pane -->
+   <div id="input-pane">
+     <div class="col-md-4">
+       <div id="date-param">
+
+          <h3>Data Range Parameters:</h3>
+          <h4>Start Date:</h4>
+          <input class="dp1 span2 form-control" size="16" type="text" value="02-16-2012">
+
+          <h4>End Date: </h4>
+          <input class="dp1 span2 form-control" type="text" value="02-16-2012">
+          <p class="spacer-low"></p>
+        </div>
+        <p>
+         <a href="#" class="btn btn-primary btn-lg" role="button">Export Dataset</a>
+       </p>
+
+     </div>
+   </div>
+   <!-- End Input Pane -->
+
+   <!-- Begin Output Pane -->
+   <div id="output-pane">
+    <div class="col-md-6-offset2 welcomebox">
+      <h1>
+        Weather data goes here!
+      </h1>
+      <p>
+        This pane is empty because you haven't looked up any weather data yet.
+      </p>
+    </div>
+  </div>
+  <!-- End Output Pane -->
+
+</div>
+</div>
+<!-- End Archive Body -->
+
+</body>
+<!-- End Body -->
+
+<script>
+  $(function(){
+    window.prettyPrint && prettyPrint();
+    $('.dp1').datepicker({
+      format: 'mm-dd-yyyy',
+      todayBtn: 'linked'
+    });
+
+    $('#dp2').datepicker();
+    $('#btn2').click(function(e){
+      e.stopPropagation();
+      $('#dp2').datepicker('update', '03/17/12');
+    });             
+
+    $('#dp3').datepicker();
+
+
+    var startDate = new Date(2012,1,20);
+    var endDate = new Date(2012,1,25);
+    $('#dp4').datepicker()
+    .on('changeDate', function(ev){
+      if (ev.date.valueOf() > endDate.valueOf()){
+        $('#alert').show().find('strong').text('The start date can not be greater then the end date');
+      } else {
+        $('#alert').hide();
+        startDate = new Date(ev.date);
+        $('#startDate').text($('#dp4').data('date'));
+      }
+      $('#dp4').datepicker('hide');
+    });
+    $('#dp5').datepicker()
+    .on('changeDate', function(ev){
+      if (ev.date.valueOf() < startDate.valueOf()){
+        $('#alert').show().find('strong').text('The end date can not be less then the start date');
+      } else {
+        $('#alert').hide();
+        endDate = new Date(ev.date);
+        $('#endDate').text($('#dp5').data('date'));
+      }
+      $('#dp5').datepicker('hide');
+    });
+
+            //inline    
+            $('#dp6').datepicker({
+              todayBtn: 'linked'
+            });
+
+            $('#btn6').click(function(){
+              $('#dp6').datepicker('update', '15-05-1984');
+            });            
+            
+            $('#btn7').click(function(){
+              $('#dp6').data('datepicker').date = null;
+              $('#dp6').find('.active').removeClass('active');                
+            });            
+          });
+</script>
+</script>
+</html>
